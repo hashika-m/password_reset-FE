@@ -1,9 +1,33 @@
 <!-- PASSWORD RESET FLOW UI -->
 
-routes and component:
-1. / : login componet which holds email,password input fields with login button.
-2. /forgotPassword : email input is present with send button
-3. /resetPassword : password and confirm password fields are present with reset password button to trigger the action
+ Routes and Components:
+1. / : This shows the default home page for the app with register and login links with welcome msg
+2. /register : if the user is first time visiting the, he/she can signup/register with their email, password as ceredentials to get access. With their given credentials the user is dynamically created in db with help of opst req.
+3. /login : If the user is aware with their login  credentails they can login and directed to their respective dashboard with jwt Bearer token in backend.then,
+        /dashbord : the user is authorized with the given token in backend and get the access to dashboard in the frontend.
+      If user forgot their password, they can click forgitPassword link, which redirect user to Forgotpassword component. There the user can enter their eamil to get a random string which further help them to reset their password.  
+4. /forgotPassword : here the user enter  their email based on verificatio if teh user is found in db/not a random string is sent in console termial of backend/ postamn response with restPassword link. Based on the res from server a msg is visble in frontend for user
+5. /resetPassword : here the user is verified with his random string and allowed to encrypt his password , confirm password. if matches the db is updated with new password and its is imitated for the user by an alert msg.
+    To verify the user can login with his newpassword, email to access get further access.      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # React + Vite
